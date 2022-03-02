@@ -9,6 +9,8 @@ public class PlatformSpawner : MonoBehaviour
     public float lowerBound;
     public float leftPos;
     public GameObject platform;
+    public int minTimeToWait;
+    public int maxTimeToWait;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +23,7 @@ public class PlatformSpawner : MonoBehaviour
 
     IEnumerator SpawnPlatform()
     {
-        yield return new WaitForSeconds(Random.Range(1 ,5));
+        yield return new WaitForSeconds(Random.Range(minTimeToWait, maxTimeToWait));
         Instantiate(platform, new Vector3(leftPos, Random.Range(lowerBound, upperBound)), Quaternion.identity);
         StartCoroutine(SpawnPlatform());
     }
