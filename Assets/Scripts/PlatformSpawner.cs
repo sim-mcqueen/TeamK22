@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class PlatformSpawner : MonoBehaviour
 {
-    //public int MaxWidth;
-    public float upperBound;
-    public float lowerBound;
-    public float leftPos;
+    public float range;
     public GameObject platform;
     public int minTimeToWait;
     public int maxTimeToWait;
@@ -16,15 +13,12 @@ public class PlatformSpawner : MonoBehaviour
     void Start()
     {
         StartCoroutine(SpawnPlatform());
-        StartCoroutine(SpawnPlatform());
-        StartCoroutine(SpawnPlatform());
-
     }
 
     IEnumerator SpawnPlatform()
     {
         yield return new WaitForSeconds(Random.Range(minTimeToWait, maxTimeToWait));
-        Instantiate(platform, new Vector3(leftPos, Random.Range(lowerBound, upperBound)), Quaternion.identity);
+        Instantiate(platform, new Vector3(transform.position.x, Random.Range(transform.position.y - range, transform.position.y + range)), Quaternion.identity);
         StartCoroutine(SpawnPlatform());
     }
 }
