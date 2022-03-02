@@ -33,10 +33,11 @@ public class PlayerControllerY : MonoBehaviour
     }
     private void Update()
     {
+        myAnim.SetBool("isGrounded", isGrounded);
+
         // Jump mechanics
         if (isGrounded) { jumpsLeft = maxJumps; }
 
-        // 
         if(rigidBody.velocity.y < 0)
         {
             rigidBody.velocity += Vector2.up * Physics2D.gravity.y * fallMultiplier * Time.deltaTime;
@@ -51,7 +52,6 @@ public class PlayerControllerY : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             audioSource.PlayOneShot(jumpNoise);
-            // Play jump animation
             isGrounded = false;
             jumpsLeft -= 1;
             rigidBody.velocity = new Vector2(0, jumpHeight);
