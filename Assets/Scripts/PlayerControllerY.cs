@@ -9,35 +9,61 @@ public class PlayerControllerY : MonoBehaviour
     public float gravity;
     public int maxJumps;
     public int jumpsLeft;
-
+    public float fallMultiplier;
+    public float fallMultiplerWhenNotHoldingJump;
     private bool isGrounded = true;
 
     // components
     private Rigidbody2D rigidBody;
     private Transform groundCheck;
 
+    // audio
+    private AudioSource audioSource;
+    public AudioClip jumpNoise;
+    public AudioClip landOnGroundNoise;
+
+    // animation
+    private Animator myAnim;
+
     private void Awake()
     {
         rigidBody = GetComponent<Rigidbody2D>();
-        groundCheck = gameObject.transform.GetChild(0);
+        audioSource = GetComponent<AudioSource>();
+        myAnim = GetComponent<Animator>();
     }
-
     private void Update()
     {
-        if(isGrounded) { jumpsLeft = maxJumps; }
+        // Jump mechanics
+        if (isGrounded) { jumpsLeft = maxJumps; }
+
+        // 
+        if(rigidBody.velocity.y < 0)
+        {
+            rigidBody.velocity += Vector2.up * Physics2D.gravity.y * fallMultiplier * Time.deltaTime;
+        }
+        else if(rigidBody.velocity.y > 0 && !Input.GetKey(KeyCode.Space))
+        {
+            rigidBody.velocity += Vector2.up * Physics2D.gravity.y * fallMultiplerWhenNotHoldingJump * Time.deltaTime;
+        }
 
         if(jumpsLeft == 0) { return; }
 
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            print("here");
-            if(isGrounded)
-            {
-                jumpsLeft -= 1;
-            }
-
-            rigidBody.velocity += new Vector2(0, jumpHeight);
+            audioSource.PlayOneShot(jumpNoise);
+            // Play jump animation
             isGrounded = false;
+            jumpsLeft -= 1;
+            rigidBody.velocity = new Vector2(0, jumpHeight);
         }
+    }
+
+    public void SetIsGrounded(bool newBool)
+    {
+        if(newBool == true && isGrounded == false)
+        {
+            audioSource.PlayOneShot(landOnGroundNoise);
+        }
+        isGrounded = newBool;
     }
 }
