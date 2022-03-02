@@ -19,7 +19,7 @@ public class SideScroll : MonoBehaviour
         offset = new Vector2(scrollSpeed, 0);
     }
 
-    void Update()
+    void FixedUpdate()
     {
         material.mainTextureOffset += offset * Time.deltaTime;
     }

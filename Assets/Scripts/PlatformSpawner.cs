@@ -6,8 +6,8 @@ public class PlatformSpawner : MonoBehaviour
 {
     public float range;
     public GameObject platform;
-    public int minTimeToWait;
-    public int maxTimeToWait;
+    public float minTimeToWait;
+    public float maxTimeToWait;
 
     // Start is called before the first frame update
     void Start()
