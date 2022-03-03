@@ -38,14 +38,14 @@ public class PlayerControllerY : MonoBehaviour
         // Jump mechanics
         if (isGrounded) { jumpsLeft = maxJumps; }
 
-        if(rigidBody.velocity.y < 0)
+        /*if(rigidBody.velocity.y < 0)
         {
             rigidBody.velocity += Vector2.up * Physics2D.gravity.y * fallMultiplier * Time.deltaTime;
         }
         else if(rigidBody.velocity.y > 0 && !Input.GetKey(KeyCode.Space))
         {
             rigidBody.velocity += Vector2.up * Physics2D.gravity.y * fallMultiplerWhenNotHoldingJump * Time.deltaTime;
-        }
+        }*/
 
         if(jumpsLeft == 0) { return; }
 

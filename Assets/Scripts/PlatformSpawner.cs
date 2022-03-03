@@ -5,20 +5,20 @@ using UnityEngine;
 public class PlatformSpawner : MonoBehaviour
 {
     public float range;
-    public GameObject platform;
+    public GameObject objectToSpawn;
     public float minTimeToWait;
     public float maxTimeToWait;
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(SpawnPlatform());
+        StartCoroutine(SpawnObject());
     }
 
-    IEnumerator SpawnPlatform()
+    IEnumerator SpawnObject()
     {
         yield return new WaitForSeconds(Random.Range(minTimeToWait, maxTimeToWait));
-        Instantiate(platform, new Vector3(transform.position.x, Random.Range(transform.position.y - range, transform.position.y + range)), Quaternion.identity);
-        StartCoroutine(SpawnPlatform());
+        Instantiate(objectToSpawn, new Vector3(transform.position.x, Random.Range(transform.position.y - range, transform.position.y + range)), Quaternion.identity);
+        StartCoroutine(SpawnObject());
     }
 }
