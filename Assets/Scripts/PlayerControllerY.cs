@@ -11,6 +11,7 @@ public class PlayerControllerY : MonoBehaviour
     public int jumpsLeft;
     public float fallMultiplier;
     public float fallMultiplerWhenNotHoldingJump;
+    public float footStepRate;
     private bool isGrounded = true;
 
     // components
@@ -21,6 +22,7 @@ public class PlayerControllerY : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip jumpNoise;
     public AudioClip landOnGroundNoise;
+    public AudioClip footStepNoise;
 
     // animation
     private Animator myAnim;
@@ -34,6 +36,9 @@ public class PlayerControllerY : MonoBehaviour
     private void Update()
     {
         myAnim.SetBool("isGrounded", isGrounded);
+
+        footStepRate -= Time.deltaTime;
+
 
         // Jump mechanics
         if (isGrounded) { jumpsLeft = maxJumps; }
