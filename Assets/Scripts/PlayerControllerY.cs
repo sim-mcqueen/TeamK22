@@ -13,7 +13,8 @@ public class PlayerControllerY : MonoBehaviour
     public float fallMultiplerWhenNotHoldingJump;
     public float footStepRate;
     private bool isGrounded = true;
-
+    private bool playHigh = false;
+    private float stepCooldown;
     // components
     private Rigidbody2D rigidBody;
     private Transform groundCheck;
@@ -22,7 +23,8 @@ public class PlayerControllerY : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip jumpNoise;
     public AudioClip landOnGroundNoise;
-    public AudioClip footStepNoise;
+    public AudioClip footStepNoiseHigh;
+    public AudioClip footStepNoiseLow;
 
     // animation
     private Animator myAnim;
@@ -37,11 +39,33 @@ public class PlayerControllerY : MonoBehaviour
     {
         myAnim.SetBool("isGrounded", isGrounded);
 
-        footStepRate -= Time.deltaTime;
+        stepCooldown -= Time.deltaTime;
+
+        if (isGrounded)
+        {
+            jumpsLeft = maxJumps;
+
+            if (stepCooldown < 0f)
+            {
+                if (playHigh)
+                {
+                    audioSource.PlayOneShot(footStepNoiseHigh);
+                    playHigh = !playHigh;
+                    stepCooldown = footStepRate;
+                }
+                else
+                {
+                    audioSource.PlayOneShot(footStepNoiseLow);
+                    playHigh = !playHigh;
+                    stepCooldown = footStepRate;
+                }
+            }
+        }
+
 
 
         // Jump mechanics
-        if (isGrounded) { jumpsLeft = maxJumps; }
+        
 
         /*if(rigidBody.velocity.y < 0)
         {
@@ -67,6 +91,7 @@ public class PlayerControllerY : MonoBehaviour
     {
         if(newBool == true && isGrounded == false)
         {
+            playHigh = false;
             audioSource.PlayOneShot(landOnGroundNoise);
         }
         isGrounded = newBool;
