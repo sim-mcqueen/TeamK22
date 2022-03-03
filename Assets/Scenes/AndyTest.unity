@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bdf6e7c34493624ab54890b522cde59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0.5
+  scrollSpeed: 0.75
 --- !u!23 &99030749
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -251,8 +251,8 @@ MonoBehaviour:
   range: 0
   objectToSpawn: {fileID: 8176831656776910511, guid: fe0e4652b33b2c64cb2052a3deeeeb78,
     type: 3}
-  minTimeToWait: 1
-  maxTimeToWait: 2
+  minTimeToWait: 2
+  maxTimeToWait: 5
 --- !u!4 &1345428081
 Transform:
   m_ObjectHideFlags: 0
@@ -385,8 +385,10 @@ MonoBehaviour:
   jumpsLeft: 0
   fallMultiplier: 2
   fallMultiplerWhenNotHoldingJump: 1
-  jumpNoise: {fileID: 8300000, guid: 39e815db8f7692a44ba7653e4d249281, type: 3}
+  footStepRate: 0
+  jumpNoise: {fileID: 8300000, guid: 2fa7d82333dfec64791746568c41e8a8, type: 3}
   landOnGroundNoise: {fileID: 8300000, guid: 2b0f4165120d4fe47be3ab1f5e4b7ff6, type: 3}
+  footStepNoise: {fileID: 0}
 --- !u!50 &1478332034
 Rigidbody2D:
   serializedVersion: 4
@@ -779,7 +781,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9448701fdbdfbdd4bb6d7a8e22c982cb, type: 3}
-  m_Color: {r: 0.14600393, g: 0.14787216, b: 0.16037738, a: 1}
+  m_Color: {r: 0.3542186, g: 0.36000356, b: 0.3773585, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -879,10 +881,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a490e8f71378b84bb3c9b8bc22db03b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 1
-  objectToSpawn: {fileID: 0}
-  minTimeToWait: 0.75
-  maxTimeToWait: 3
+  range: 1.5
+  objectToSpawn: {fileID: 4022793251625037393, guid: 7dc21eea2f579d64bb1a600ed4f9d629,
+    type: 3}
+  minTimeToWait: 1.5
+  maxTimeToWait: 4
 --- !u!4 &2000837648
 Transform:
   m_ObjectHideFlags: 0

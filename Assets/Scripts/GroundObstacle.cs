@@ -7,7 +7,7 @@ public class GroundObstacle : MonoBehaviour
     public float obstacleSpeed;
 
     private AudioSource audioSource;
-    public AudioClip jumpNoise;
+    public AudioClip obstacleHitNoise;
 
     private Rigidbody2D myRB;
 
@@ -25,6 +25,7 @@ public class GroundObstacle : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             // play obstacle hit sound
+            audioSource.PlayOneShot(obstacleHitNoise);
             // play damage animation
             Destroy(gameObject);
         }
