@@ -10,6 +10,5 @@ public class ObstacleHitEvent : MonoBehaviour
     public void HitObstacle()
     {
         OnHitObstacle?.Invoke(this, EventArgs.Empty);
-        print("hitObstacle");
     }
 }

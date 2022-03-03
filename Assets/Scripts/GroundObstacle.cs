@@ -29,9 +29,9 @@ public class GroundObstacle : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
+            // invoke obstacle hit event
             obstacleHitEvent.HitObstacle();
             audioSource.PlayOneShot(obstacleHitNoise);
-            // play damage animation
             Destroy(gameObject);
         }
     }
