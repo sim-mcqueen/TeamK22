@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AndyTest.unity
     guid: 9291e880cd30c894cadd84353e87ea11
+  - enabled: 1
+    path: Assets/Scenes/SimTest.unity
+    guid: 2fa14993318bd6947a41404a320ff072
   m_configObjects: {}
