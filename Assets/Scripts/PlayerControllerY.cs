@@ -15,10 +15,13 @@ public class PlayerControllerY : MonoBehaviour
     private bool isGrounded = true;
     private bool playHigh = false;
     private float stepCooldown;
+    private Color mainColor;
+
     // components
     private Rigidbody2D rigidBody;
     private Transform groundCheck;
-
+    private ObstacleHitEvent obstacleHitEvent;
+    private SpriteRenderer spriteRenderer;
     // audio
     private AudioSource audioSource;
     public AudioClip jumpNoise;
@@ -31,10 +34,24 @@ public class PlayerControllerY : MonoBehaviour
 
     private void Awake()
     {
+        obstacleHitEvent = FindObjectOfType<ObstacleHitEvent>();
         rigidBody = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
         myAnim = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
+
+    private void Start()
+    {
+        obstacleHitEvent.OnHitObstacle += ObstacleHitEvent_OnHitObstacle;
+        mainColor = spriteRenderer.color;
+    }
+
+    private void ObstacleHitEvent_OnHitObstacle(object sender, System.EventArgs e)
+    {
+        StartCoroutine(FlashColor(0.25f));
+    }
+
     private void Update()
     {
         myAnim.SetBool("isGrounded", isGrounded);
@@ -95,5 +112,12 @@ public class PlayerControllerY : MonoBehaviour
             audioSource.PlayOneShot(landOnGroundNoise);
         }
         isGrounded = newBool;
+    }
+
+    IEnumerator FlashColor(float wait)
+    {
+        spriteRenderer.color = new Color(1, 1, 1);
+        yield return new WaitForSeconds(wait);
+        spriteRenderer.color = mainColor;
     }
 }
