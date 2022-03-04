@@ -51,6 +51,7 @@ SpriteAtlas:
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: f7e31280ee57c8c429f13ae0c631b597, type: 3}
+  - {fileID: 21300000, guid: 3371a941b73b5454180887f59ab236c3, type: 3}
   - {fileID: 4413142109597815103, guid: 29173af6ad4f8f34cae2f2ad028ec303, type: 3}
   - {fileID: -3674992999376901249, guid: 29173af6ad4f8f34cae2f2ad028ec303, type: 3}
   - {fileID: 4227826887867029099, guid: 29173af6ad4f8f34cae2f2ad028ec303, type: 3}
@@ -266,9 +267,12 @@ SpriteAtlas:
   - {fileID: -2209401061123471698, guid: d37e19ad10172ab4fb53c4f7e74a4e55, type: 3}
   - {fileID: 1018328791618719094, guid: d37e19ad10172ab4fb53c4f7e74a4e55, type: 3}
   - {fileID: 6731733094262721628, guid: d37e19ad10172ab4fb53c4f7e74a4e55, type: 3}
+  - {fileID: 21300000, guid: 1d4cfb1e695eac74a950d22c6beb7782, type: 3}
+  - {fileID: 21300000, guid: ae33b96e7a7978e4a868695d8c563dfe, type: 3}
   - {fileID: 21300000, guid: 9448701fdbdfbdd4bb6d7a8e22c982cb, type: 3}
   m_PackedSpriteNamesToIndex:
   - character_place_holder
+  - cloud_3
   - FlyingSlimeAttack_8
   - FlyingSlimeAttack_7
   - FlyingSlimeAttack_6
@@ -484,6 +488,8 @@ SpriteAtlas:
   - tileset_96
   - tileset_95
   - tileset_94
+  - cloud_2
+  - cloud_1
   - Square
   m_RenderDataMap: {}
   m_Tag: Tiles

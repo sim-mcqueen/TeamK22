@@ -9,8 +9,6 @@ public class PlayerControllerY : MonoBehaviour
     public float gravity;
     public int maxJumps;
     public int jumpsLeft;
-    public float fallMultiplier;
-    public float fallMultiplerWhenNotHoldingJump;
     public float footStepRate;
     private bool isGrounded = true;
     private bool playHigh = false;
@@ -55,6 +53,7 @@ public class PlayerControllerY : MonoBehaviour
     private void Update()
     {
         myAnim.SetBool("isGrounded", isGrounded);
+        Physics2D.gravity = new Vector2(0, gravity);
 
         stepCooldown -= Time.deltaTime;
 

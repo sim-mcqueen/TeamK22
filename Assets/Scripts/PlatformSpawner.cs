@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlatformSpawner : MonoBehaviour
 {
     public float range;
-    public GameObject objectToSpawn;
+    public GameObject[] objectToSpawn;
     public float minTimeToWait;
     public float maxTimeToWait;
 
@@ -18,7 +18,7 @@ public class PlatformSpawner : MonoBehaviour
     IEnumerator SpawnObject()
     {
         yield return new WaitForSeconds(Random.Range(minTimeToWait, maxTimeToWait));
-        Instantiate(objectToSpawn, new Vector3(transform.position.x, Random.Range(transform.position.y - range, transform.position.y + range)), Quaternion.identity);
+        GameObject obj = Instantiate(objectToSpawn[Random.Range(0, objectToSpawn.Length)], new Vector3(transform.position.x, Random.Range(transform.position.y - range, transform.position.y + range)), Quaternion.identity);
         StartCoroutine(SpawnObject());
     }
 }
