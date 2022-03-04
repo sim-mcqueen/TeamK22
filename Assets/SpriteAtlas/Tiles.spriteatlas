@@ -66,6 +66,7 @@ SpriteAtlas:
   - {fileID: -3347984106645726015, guid: 9e5bac4777e59db4c80a998172c53472, type: 3}
   - {fileID: -6386380331874166012, guid: 9e5bac4777e59db4c80a998172c53472, type: 3}
   - {fileID: 4055577607036525942, guid: 9e5bac4777e59db4c80a998172c53472, type: 3}
+  - {fileID: 21300000, guid: 1987fa59442e2a64dabd0101729bd603, type: 3}
   - {fileID: 7562716900497062, guid: f99a3879764308a4d92d87d841829522, type: 3}
   - {fileID: -7154765599751142846, guid: f99a3879764308a4d92d87d841829522, type: 3}
   - {fileID: 2984065513281883999, guid: f99a3879764308a4d92d87d841829522, type: 3}
@@ -288,6 +289,7 @@ SpriteAtlas:
   - FlyingSlimeIdle_0
   - FlyingSlimeIdle_3
   - FlyingSlimeIdle_2
+  - KateS_EllenE_AriRI_gameclouds
   - cavesofgallet_tiles_0
   - cavesofgallet_tiles_1
   - cavesofgallet_tiles_2
