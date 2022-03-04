@@ -8,24 +8,24 @@ public class PlayerLives : MonoBehaviour
 
     private DeathFade deathFade;
     private ObstacleHitEvent obstacleHitEvent;
+    private DeathEvent deathEvent;
 
     private void Awake()
     {
+        deathEvent = FindObjectOfType<DeathEvent>();
         obstacleHitEvent = FindObjectOfType<ObstacleHitEvent>();
-        deathFade = FindObjectOfType<DeathFade>();
     }
 
     private void Start()
     {
         obstacleHitEvent.OnHitObstacle += ObstacleHitEvent_OnHitObstacle;
     }
-
     private void ObstacleHitEvent_OnHitObstacle(object sender, System.EventArgs e)
     {
         lives -= 1;
         if (lives == 0)
         {
-            deathFade.StartDeath();
+            deathEvent.Death();
             return;
         }
     }

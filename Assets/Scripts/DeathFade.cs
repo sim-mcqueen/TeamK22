@@ -12,10 +12,24 @@ public class DeathFade : MonoBehaviour
     private float colorChange;
     private bool fadeToBlack;
     public int waitTime;
-    // Start is called before the first frame update
+
+    private DeathEvent deathEvent;
+
+    private void Awake()
+    {
+        deathEvent = FindObjectOfType<DeathEvent>();
+    }
     void Start()
     {
         colorChange = 0;
+        deathEvent.OnDeath += DeathEvent_OnDeath;
+    }
+
+    private void DeathEvent_OnDeath(object sender, System.EventArgs e)
+    {
+        FindObjectOfType<KScoreText>().StopCounting();
+        fadeToBlack = true;
+        StartCoroutine(goToMainMenu());
     }
 
     // Update is called once per frame
@@ -27,15 +41,6 @@ public class DeathFade : MonoBehaviour
             colorChange += deltaColor;
         }
     }
-
-
-    public void StartDeath()
-    {
-        FindObjectOfType<KScoreText>().StopCounting();
-        fadeToBlack = true;
-        StartCoroutine(goToMainMenu());
-    }
-
 
     IEnumerator goToMainMenu()
     {

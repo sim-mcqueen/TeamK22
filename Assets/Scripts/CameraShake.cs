@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CameraShake : MonoBehaviour
 {
+
+    public float hitMag;
+    public float hitDuration;
     private float timeElapsed;
     private float xOffset;
     private float yOffset;
@@ -23,7 +26,7 @@ public class CameraShake : MonoBehaviour
 
     private void ObstacleHitEvent_OnHitObstacle(object sender, System.EventArgs e)
     {
-        ShakeScreen(.5f, 2);
+        StartCoroutine(ShakeScreen(hitDuration, hitMag));
     }
 
     IEnumerator ShakeScreen(float duration, float mag)
