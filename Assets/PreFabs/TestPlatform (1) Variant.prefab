@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5990254075885313826
+--- !u!1001 &7075636011712100581
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,33 +10,33 @@ PrefabInstance:
     - target: {fileID: -1028982758761379160, guid: 7dc21eea2f579d64bb1a600ed4f9d629,
         type: 3}
       propertyPath: m_Size.x
-      value: 1.201324
+      value: 1.2685955
       objectReference: {fileID: 0}
     - target: {fileID: -1028982758761379160, guid: 7dc21eea2f579d64bb1a600ed4f9d629,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.062328756
+      value: 0.023066342
       objectReference: {fileID: 0}
     - target: {fileID: -1028982758761379160, guid: 7dc21eea2f579d64bb1a600ed4f9d629,
         type: 3}
       propertyPath: m_Offset.x
-      value: -0.00039494038
+      value: -0.0039019287
       objectReference: {fileID: 0}
     - target: {fileID: -1028982758761379160, guid: 7dc21eea2f579d64bb1a600ed4f9d629,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.22144803
+      value: -0.24606243
       objectReference: {fileID: 0}
     - target: {fileID: 4022793251625037393, guid: 7dc21eea2f579d64bb1a600ed4f9d629,
         type: 3}
       propertyPath: m_Name
-      value: TestPlatform (1)
+      value: TestPlatform (1) Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4022793251625037742, guid: 7dc21eea2f579d64bb1a600ed4f9d629,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 1d4cfb1e695eac74a950d22c6beb7782,
+      objectReference: {fileID: 21300000, guid: a3cfa57fd1d811d42af495f1ea49901e,
         type: 3}
     - target: {fileID: 4022793251625037743, guid: 7dc21eea2f579d64bb1a600ed4f9d629,
         type: 3}
@@ -93,5 +93,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5497314160905030042, guid: 7dc21eea2f579d64bb1a600ed4f9d629,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c27d01c6abe524e40a73d7f513f7f643,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7dc21eea2f579d64bb1a600ed4f9d629, type: 3}
