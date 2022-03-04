@@ -6,11 +6,13 @@ public class PlayerLives : MonoBehaviour
 {
     public int lives;
 
+    private DeathFade deathFade;
     private ObstacleHitEvent obstacleHitEvent;
 
     private void Awake()
     {
         obstacleHitEvent = FindObjectOfType<ObstacleHitEvent>();
+        deathFade = FindObjectOfType<DeathFade>();
     }
 
     private void Start()
@@ -23,7 +25,7 @@ public class PlayerLives : MonoBehaviour
         lives -= 1;
         if (lives == 0)
         {
-            // end game
+            deathFade.StartDeath();
             return;
         }
     }
