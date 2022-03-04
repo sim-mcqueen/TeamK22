@@ -14,7 +14,8 @@ public class SideScroll : MonoBehaviour
     }
     private void Start()
     {
-        transform.position = Vector3.zero;
+        // Canvas is invisible otherwise
+        transform.position = new Vector3(0, 0, 100);
         startPosition = transform.position;
         offset = new Vector2(scrollSpeed, 0);
     }
