@@ -31,6 +31,7 @@ public class DeathFade : MonoBehaviour
 
     public void StartDeath()
     {
+        FindObjectOfType<KScoreText>().StopCounting();
         fadeToBlack = true;
         StartCoroutine(goToMainMenu());
     }
