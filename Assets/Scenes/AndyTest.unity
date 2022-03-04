@@ -545,8 +545,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 0
-  objectSprites: []
-  objectToSpawn: {fileID: 0}
+  objectToSpawn:
+  - {fileID: 8176831656776910511, guid: fe0e4652b33b2c64cb2052a3deeeeb78, type: 3}
   minTimeToWait: 2
   maxTimeToWait: 5
 --- !u!4 &1345428081
@@ -626,7 +626,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: f7e31280ee57c8c429f13ae0c631b597, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -676,12 +676,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 531fa59a8b6fd804086649c302b3b794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpHeight: 10
-  gravity: 0
+  jumpHeight: 20
+  gravity: -50
   maxJumps: 2
   jumpsLeft: 0
-  fallMultiplier: 2
-  fallMultiplerWhenNotHoldingJump: 1
   footStepRate: 0.2
   jumpNoise: {fileID: 8300000, guid: 2fa7d82333dfec64791746568c41e8a8, type: 3}
   landOnGroundNoise: {fileID: 8300000, guid: 2b0f4165120d4fe47be3ab1f5e4b7ff6, type: 3}
@@ -716,8 +714,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1478332030}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: -1.22, z: -0.0092}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: -5, y: -1.66, z: -0.0092}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1502998315}
   m_Father: {fileID: 0}
@@ -845,7 +843,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1478332030}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b446c65616bced7439a59434a61cf8a1, type: 3}
   m_Name: 
@@ -878,7 +876,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1502998314}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.024, z: 0}
+  m_LocalPosition: {x: 0, y: -0.067, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1478332035}
@@ -1433,8 +1431,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 1.5
-  objectSprites: []
-  objectToSpawn: {fileID: 0}
+  objectToSpawn:
+  - {fileID: 7274014329023246707, guid: c0791296a35c402449d3f31a604b65c3, type: 3}
+  - {fileID: 1939885031764488005, guid: ad268424f371b7d419302c7fa1cd335b, type: 3}
+  - {fileID: 4022793251625037393, guid: 7dc21eea2f579d64bb1a600ed4f9d629, type: 3}
   minTimeToWait: 1.5
   maxTimeToWait: 4
 --- !u!4 &2000837648

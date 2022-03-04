@@ -5,7 +5,7 @@ using UnityEngine;
 public class LevelMusic : MonoBehaviour
 {
     private AudioSource audioSource;
-    private AudioClip levelMusic;
+    public AudioClip levelMusic;
 
     private void Awake()
     {
