@@ -350,6 +350,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 3
+  heartOne: {fileID: 181484297}
+  heartTwo: {fileID: 1424820158}
+  heartThree: {fileID: 906141759}
 --- !u!1 &457052764
 GameObject:
   m_ObjectHideFlags: 0
