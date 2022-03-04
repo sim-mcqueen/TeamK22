@@ -39,6 +39,7 @@ public class DeathFade : MonoBehaviour
     IEnumerator goToMainMenu()
     {
         yield return new WaitForSeconds(waitTime);
+        GameManager.score = FindObjectOfType<KScoreText>().GetScore();
         SceneManager.LoadScene(mainMenu);
 
     }
