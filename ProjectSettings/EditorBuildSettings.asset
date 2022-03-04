@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SimTest.unity
     guid: 2fa14993318bd6947a41404a320ff072
+  - enabled: 1
+    path: Assets/Scenes/MainLevel.unity
+    guid: 32acadefaf97ffb4faffb1394f3ec80c
   m_configObjects: {}
