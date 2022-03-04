@@ -53,6 +53,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 74d9f270a2fefaf49a1f495703dc388a, type: 3}
   - {fileID: 21300000, guid: f7e31280ee57c8c429f13ae0c631b597, type: 3}
   - {fileID: 21300000, guid: 3371a941b73b5454180887f59ab236c3, type: 3}
+  - {fileID: 21300000, guid: 5c74526126eeef34693dded207bad660, type: 3}
   - {fileID: 4413142109597815103, guid: 29173af6ad4f8f34cae2f2ad028ec303, type: 3}
   - {fileID: -3674992999376901249, guid: 29173af6ad4f8f34cae2f2ad028ec303, type: 3}
   - {fileID: 4227826887867029099, guid: 29173af6ad4f8f34cae2f2ad028ec303, type: 3}
@@ -160,6 +161,7 @@ SpriteAtlas:
   - {fileID: -7336076203705889676, guid: f99a3879764308a4d92d87d841829522, type: 3}
   - {fileID: -4344611882063969491, guid: f99a3879764308a4d92d87d841829522, type: 3}
   - {fileID: -5241486731584646207, guid: f99a3879764308a4d92d87d841829522, type: 3}
+  - {fileID: 21300000, guid: 53e5f3bbe37027543a7f3a80bf177d8d, type: 3}
   - {fileID: 1671283345461455480, guid: 950f927dbc9d7d146bfeab77e560f475, type: 3}
   - {fileID: -3638366375080524030, guid: 950f927dbc9d7d146bfeab77e560f475, type: 3}
   - {fileID: 3774374558072554424, guid: 950f927dbc9d7d146bfeab77e560f475, type: 3}
@@ -276,6 +278,7 @@ SpriteAtlas:
   - star
   - character_place_holder
   - cloud_3
+  - oneHeart
   - FlyingSlimeAttack_8
   - FlyingSlimeAttack_7
   - FlyingSlimeAttack_6
@@ -383,6 +386,7 @@ SpriteAtlas:
   - cavesofgallet_tiles_72
   - cavesofgallet_tiles_8
   - cavesofgallet_tiles_9
+  - hearts_empty
   - rotating_coin_0
   - rotating_coin_1
   - rotating_coin_2
