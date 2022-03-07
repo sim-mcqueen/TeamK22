@@ -12,6 +12,14 @@ public class KScoreText : MonoBehaviour
     public GameObject text;
     private DeathEvent DE;
 
+    private int num;
+    private bool eventActive = false;
+    private GravityEvent gravityEvent;
+
+    private void Awake()
+    {
+        gravityEvent = FindObjectOfType<GravityEvent>();
+    }
 
     private void Awake()
     {
@@ -33,6 +41,28 @@ public class KScoreText : MonoBehaviour
     {
         yield return new WaitForSeconds(deltaScore);
         Score++;
+        if(Score % 50 == 0)
+        {
+            if(eventActive)
+            {
+                if(num == 0)
+                {
+                    gravityEvent.ChangeGravity();
+                }
+                eventActive = false;
+            }
+            else
+            {
+                eventActive = true;
+                // num = Random.Range(0, 0);
+                num = 0;
+                if (num == 0)
+                {
+                    gravityEvent.ChangeGravity();
+                }
+            }
+        }
+
         text.GetComponent<TextMeshProUGUI>().text = "Score: " + Score;
         if(!StopScore)
         {
