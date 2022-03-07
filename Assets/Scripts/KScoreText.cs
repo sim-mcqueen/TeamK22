@@ -19,7 +19,7 @@ public class KScoreText : MonoBehaviour
     private void Awake()
     {
         gravityEvent = FindObjectOfType<GravityEvent>();
-        DE = GetComponent<DeathEvent>();
+        DE = FindObjectOfType<DeathEvent>();
     }
 
     
