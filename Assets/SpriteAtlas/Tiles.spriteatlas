@@ -54,6 +54,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: c72d9070198a7c648ab12a75db201bb6, type: 3}
   - {fileID: 21300000, guid: 74d9f270a2fefaf49a1f495703dc388a, type: 3}
   - {fileID: 21300000, guid: f7e31280ee57c8c429f13ae0c631b597, type: 3}
+  - {fileID: 21300000, guid: 32ede990f2745f0419c5b5e0a4d1835c, type: 3}
   - {fileID: 21300000, guid: faf616c09bd5e5a40ad52b089f28a1d8, type: 3}
   - {fileID: 21300000, guid: 4a842811a1a8a424191961b4dddc2bb0, type: 3}
   - {fileID: 21300000, guid: 3371a941b73b5454180887f59ab236c3, type: 3}
@@ -66,7 +67,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 842da833cdfbfd544a8852d037cef131, type: 3}
   - {fileID: 21300000, guid: e4066dd3d1192774a83066adc552ee70, type: 3}
   - {fileID: 21300000, guid: 32ff82d5553523544bece21adcc35663, type: 3}
-  - {fileID: 21300000, guid: 012ec806d87b4bf448e9fe8b41d26602, type: 3}
   - {fileID: 21300000, guid: c27d01c6abe524e40a73d7f513f7f643, type: 3}
   - {fileID: 4413142109597815103, guid: 29173af6ad4f8f34cae2f2ad028ec303, type: 3}
   - {fileID: -3674992999376901249, guid: 29173af6ad4f8f34cae2f2ad028ec303, type: 3}
@@ -83,7 +83,6 @@ SpriteAtlas:
   - {fileID: 4055577607036525942, guid: 9e5bac4777e59db4c80a998172c53472, type: 3}
   - {fileID: 21300000, guid: 3155eb87c92788f4592af086cb72fa72, type: 3}
   - {fileID: 21300000, guid: a90142e7ce0f6f24da408581aa62410e, type: 3}
-  - {fileID: 21300000, guid: b6b770181a50f94439869c1f002f7bc2, type: 3}
   - {fileID: 21300000, guid: 35394d091a8728f46adee3ca3b6b3ba1, type: 3}
   - {fileID: 21300000, guid: b29a7219a61eaef41b891500ae4ed3be, type: 3}
   - {fileID: 21300000, guid: 929470293018a8f4e8a2a9fb90f2c65c, type: 3}
@@ -308,6 +307,7 @@ SpriteAtlas:
   - TempRunFrame0007
   - star
   - character_place_holder
+  - KateS_EllenE_AriRI_gamestar_fixed (1)
   - cloud_1_front
   - cloud_3_front
   - cloud_3
@@ -320,7 +320,6 @@ SpriteAtlas:
   - TempRunFrame0014
   - TempRunFrame0003
   - TempRunFrame0008
-  - KateS_EllenE_AriRI_gamestar_fixed
   - cloud_2_front
   - FlyingSlimeAttack_8
   - FlyingSlimeAttack_7
@@ -337,7 +336,6 @@ SpriteAtlas:
   - FlyingSlimeIdle_2
   - KateS_EllenE_AriRI_gamenightmare2
   - cloud_1_back
-  - KateS_EllenE_AriRI_gamestarthing
   - TempRunFrame0009
   - KateS_EllenE_AriRI_gameclouds 1
   - TempRunFrame0002

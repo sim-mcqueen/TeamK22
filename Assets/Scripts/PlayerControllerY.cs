@@ -26,6 +26,7 @@ public class PlayerControllerY : MonoBehaviour
     public AudioClip landOnGroundNoise;
     public AudioClip footStepNoiseHigh;
     public AudioClip footStepNoiseLow;
+    public AudioClip flipGravityNoise;
 
     // animation
     private Animator myAnim;
