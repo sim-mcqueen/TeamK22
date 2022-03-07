@@ -1429,11 +1429,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelTracks:
   - LevelName: MainMenu
-    Music: {fileID: 8300000, guid: 9dc278952fbd04f489c90dd679d54719, type: 3}
+    Music: {fileID: 0}
   - LevelName: BaseLevel
-    Music: {fileID: 8300000, guid: 9dc278952fbd04f489c90dd679d54719, type: 3}
+    Music: {fileID: 8300000, guid: 8dbf1fcf41bd96141934ba2ef122da59, type: 3}
   - LevelName: EndScene
-    Music: {fileID: 8300000, guid: 9dc278952fbd04f489c90dd679d54719, type: 3}
+    Music: {fileID: 0}
 --- !u!4 &1025920353
 Transform:
   m_ObjectHideFlags: 0
