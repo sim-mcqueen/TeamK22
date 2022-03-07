@@ -18,8 +18,8 @@ public class PlayerControllerY : MonoBehaviour
     // components
     private Rigidbody2D rigidBody;
     private Transform groundCheck;
-    private ObstacleHitEvent obstacleHitEvent;
     private SpriteRenderer spriteRenderer;
+
     // audio
     private AudioSource audioSource;
     public AudioClip jumpNoise;
@@ -30,8 +30,14 @@ public class PlayerControllerY : MonoBehaviour
     // animation
     private Animator myAnim;
 
+    // events
+    private GravityEvent gravityEvent;
+    private bool isGravityOn = true;
+    private ObstacleHitEvent obstacleHitEvent;
+
     private void Awake()
     {
+        gravityEvent = FindObjectOfType<GravityEvent>();
         obstacleHitEvent = FindObjectOfType<ObstacleHitEvent>();
         rigidBody = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
@@ -41,8 +47,25 @@ public class PlayerControllerY : MonoBehaviour
 
     private void Start()
     {
+        gravityEvent.OnGravityChange += GravityEvent_OnGravityChange;
         obstacleHitEvent.OnHitObstacle += ObstacleHitEvent_OnHitObstacle;
         mainColor = spriteRenderer.color;
+    }
+
+    private void GravityEvent_OnGravityChange(object sender, System.EventArgs e)
+    {
+        if(isGravityOn)
+        {
+            gravity = -28;
+            jumpHeight = 15;
+            isGravityOn = !isGravityOn;
+            return;
+        }
+        isGravityOn = !isGravityOn;
+        gravity = -50;
+        jumpHeight = 20;
+        return;
+
     }
 
     private void ObstacleHitEvent_OnHitObstacle(object sender, System.EventArgs e)
@@ -53,6 +76,7 @@ public class PlayerControllerY : MonoBehaviour
     private void Update()
     {
         myAnim.SetBool("isGrounded", isGrounded);
+
         Physics2D.gravity = new Vector2(0, gravity);
 
         stepCooldown -= Time.deltaTime;
