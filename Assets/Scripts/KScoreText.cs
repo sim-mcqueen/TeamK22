@@ -10,11 +10,23 @@ public class KScoreText : MonoBehaviour
     public float deltaScore;
     private bool StopScore;
     public GameObject text;
+    private DeathEvent DE;
 
+
+    private void Awake()
+    {
+        DE = GetComponent<DeathEvent>();
+    }
 
     private void Start()
     {
         StartCoroutine(IncreaseScore());
+        DE.OnDeath += DE_OnDeath;
+    }
+
+    private void DE_OnDeath(object sender, System.EventArgs e)
+    {
+        StopCounting();
     }
 
     IEnumerator IncreaseScore()

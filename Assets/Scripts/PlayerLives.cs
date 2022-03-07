@@ -36,11 +36,9 @@ public class PlayerLives : MonoBehaviour
         if (lives == 0)
         {
             heartOne.SetActive(false);
-        }
-        if (lives == 0)
-        {
             deathEvent.Death();
             return;
         }
+        
     }
 }
