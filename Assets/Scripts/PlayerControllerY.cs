@@ -53,15 +53,18 @@ public class PlayerControllerY : MonoBehaviour
         mainColor = spriteRenderer.color;
     }
 
+
     private void GravityEvent_OnGravityChange(object sender, System.EventArgs e)
     {
         if(isGravityOn)
         {
+            audioSource.PlayOneShot(flipGravityNoise);
             gravity = -28;
             jumpHeight = 15;
             isGravityOn = !isGravityOn;
             return;
         }
+        audioSource.PlayOneShot(flipGravityNoise);
         isGravityOn = !isGravityOn;
         gravity = -50;
         jumpHeight = 20;
@@ -130,4 +133,5 @@ public class PlayerControllerY : MonoBehaviour
         yield return new WaitForSeconds(wait);
         spriteRenderer.color = mainColor;
     }
+
 }

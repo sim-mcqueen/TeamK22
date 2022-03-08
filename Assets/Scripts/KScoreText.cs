@@ -15,9 +15,11 @@ public class KScoreText : MonoBehaviour
     private int num;
     private bool eventActive = false;
     private GravityEvent gravityEvent;
+    private RotateCameraEvent rotateCameraEvent;
 
     private void Awake()
     {
+        rotateCameraEvent = FindObjectOfType<RotateCameraEvent>();
         gravityEvent = FindObjectOfType<GravityEvent>();
         DE = FindObjectOfType<DeathEvent>();
     }
@@ -28,6 +30,11 @@ public class KScoreText : MonoBehaviour
     {
         StartCoroutine(IncreaseScore());
         DE.OnDeath += DE_OnDeath;
+    }
+
+    private void RotateCameraEvent_OnRotateCamera(object sender, System.EventArgs e)
+    {
+        throw new System.NotImplementedException();
     }
 
     private void DE_OnDeath(object sender, System.EventArgs e)
@@ -47,6 +54,10 @@ public class KScoreText : MonoBehaviour
                 {
                     gravityEvent.ChangeGravity();
                 }
+                if(num == 1)
+                {
+                    rotateCameraEvent.RotateCamera();
+                }
                 eventActive = false;
             }
             else
@@ -57,6 +68,10 @@ public class KScoreText : MonoBehaviour
                 if (num == 0)
                 {
                     gravityEvent.ChangeGravity();
+                }
+                if(num == 1)
+                {
+                    rotateCameraEvent.RotateCamera();
                 }
             }
         }

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -1028982758761379160}
   - component: {fileID: 8065563561360340886}
   - component: {fileID: -4676497645522151604}
+  - component: {fileID: -1137675859338097711}
   m_Layer: 0
   m_Name: TestPlatform
   m_TagString: Ground
@@ -182,6 +183,25 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!95 &-1137675859338097711
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4022793251625037393}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8944083613196377958
 GameObject:
   m_ObjectHideFlags: 0

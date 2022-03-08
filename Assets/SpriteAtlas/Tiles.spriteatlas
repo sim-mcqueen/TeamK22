@@ -61,10 +61,13 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 5c74526126eeef34693dded207bad660, type: 3}
   - {fileID: 21300000, guid: 4b952f6187ffea54d9988a5ffeb3e3e3, type: 3}
   - {fileID: 21300000, guid: 17d238811053d81479792276c4e917aa, type: 3}
+  - {fileID: 21300000, guid: d5fb949216c2aec4f869002c4bacec06, type: 3}
   - {fileID: 21300000, guid: c90eab9278fdc96488fba16fb9bfc151, type: 3}
   - {fileID: 21300000, guid: 1e7913e2897c0da4a835311e556fac3d, type: 3}
   - {fileID: 21300000, guid: 38253803ba8ff1544a819d83226427b6, type: 3}
+  - {fileID: 21300000, guid: a551fd136d99e4a439ee0c2fbaa82fb4, type: 3}
   - {fileID: 21300000, guid: 842da833cdfbfd544a8852d037cef131, type: 3}
+  - {fileID: 21300000, guid: ddcd8e53d423cbb4f82040ace3b70ee4, type: 3}
   - {fileID: 21300000, guid: e4066dd3d1192774a83066adc552ee70, type: 3}
   - {fileID: 21300000, guid: 32ff82d5553523544bece21adcc35663, type: 3}
   - {fileID: 21300000, guid: c27d01c6abe524e40a73d7f513f7f643, type: 3}
@@ -77,12 +80,16 @@ SpriteAtlas:
   - {fileID: -1986914867161763858, guid: 29173af6ad4f8f34cae2f2ad028ec303, type: 3}
   - {fileID: 2355461983139839047, guid: 29173af6ad4f8f34cae2f2ad028ec303, type: 3}
   - {fileID: -670163557928789229, guid: 29173af6ad4f8f34cae2f2ad028ec303, type: 3}
+  - {fileID: 21300000, guid: bae76647744be2048b0dd423fe5038d8, type: 3}
   - {fileID: 9145588197540752857, guid: 9e5bac4777e59db4c80a998172c53472, type: 3}
   - {fileID: -3347984106645726015, guid: 9e5bac4777e59db4c80a998172c53472, type: 3}
   - {fileID: -6386380331874166012, guid: 9e5bac4777e59db4c80a998172c53472, type: 3}
   - {fileID: 4055577607036525942, guid: 9e5bac4777e59db4c80a998172c53472, type: 3}
   - {fileID: 21300000, guid: 3155eb87c92788f4592af086cb72fa72, type: 3}
   - {fileID: 21300000, guid: a90142e7ce0f6f24da408581aa62410e, type: 3}
+  - {fileID: 21300000, guid: 72d455f766f6fd847878f213b11d86d1, type: 3}
+  - {fileID: 21300000, guid: d0a52bf78a4772b44ba638217be34fef, type: 3}
+  - {fileID: 21300000, guid: f97221d8bc9e7fb459f16859f547325c, type: 3}
   - {fileID: 21300000, guid: 35394d091a8728f46adee3ca3b6b3ba1, type: 3}
   - {fileID: 21300000, guid: b29a7219a61eaef41b891500ae4ed3be, type: 3}
   - {fileID: 21300000, guid: 929470293018a8f4e8a2a9fb90f2c65c, type: 3}
@@ -181,8 +188,12 @@ SpriteAtlas:
   - {fileID: -7336076203705889676, guid: f99a3879764308a4d92d87d841829522, type: 3}
   - {fileID: -4344611882063969491, guid: f99a3879764308a4d92d87d841829522, type: 3}
   - {fileID: -5241486731584646207, guid: f99a3879764308a4d92d87d841829522, type: 3}
+  - {fileID: 21300000, guid: e83ee8e99a7eb334799ea525436b4cda, type: 3}
+  - {fileID: 21300000, guid: 98a38eba2747db6459f2dc52b2d9ce0b, type: 3}
   - {fileID: 21300000, guid: 028602eaf63f15448b2c8e4e81a2385a, type: 3}
+  - {fileID: 21300000, guid: 16dc862bb00d8ae43b759241b8ec183d, type: 3}
   - {fileID: 21300000, guid: 53e5f3bbe37027543a7f3a80bf177d8d, type: 3}
+  - {fileID: 21300000, guid: e867180caff326d4d9ab4d1a773087e1, type: 3}
   - {fileID: 1671283345461455480, guid: 950f927dbc9d7d146bfeab77e560f475, type: 3}
   - {fileID: -3638366375080524030, guid: 950f927dbc9d7d146bfeab77e560f475, type: 3}
   - {fileID: 3774374558072554424, guid: 950f927dbc9d7d146bfeab77e560f475, type: 3}
@@ -302,6 +313,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 97897c3fae26a8d409d1c21b11dae730, type: 3}
   - {fileID: 21300000, guid: a3cfa57fd1d811d42af495f1ea49901e, type: 3}
   - {fileID: 21300000, guid: d7c7b4bf63e6f0e4f9f6359937b3398f, type: 3}
+  - {fileID: 21300000, guid: a4c2abfff76a11e419a9096cc447d2b0, type: 3}
   m_PackedSpriteNamesToIndex:
   - KateS_EllenE_AriRI_gamenightmare
   - TempRunFrame0007
@@ -314,10 +326,13 @@ SpriteAtlas:
   - oneHeart
   - TempRunFrame0011
   - TempRunFrame0004
+  - cloud 1 front frame 1
   - TempRunFrame0015
   - backround_(seprate)
   - TempRunFrame0012
+  - cloud 1 front frame 2
   - TempRunFrame0014
+  - cloud 2 back frame 1
   - TempRunFrame0003
   - TempRunFrame0008
   - cloud_2_front
@@ -330,12 +345,16 @@ SpriteAtlas:
   - FlyingSlimeAttack_2
   - FlyingSlimeAttack_1
   - FlyingSlimeAttack_0
+  - cloud 3 back frame 2
   - FlyingSlimeIdle_1
   - FlyingSlimeIdle_0
   - FlyingSlimeIdle_3
   - FlyingSlimeIdle_2
   - KateS_EllenE_AriRI_gamenightmare2
   - cloud_1_back
+  - cloud 2 front frame 2
+  - cloud 1 back frame 2
+  - cloud 2 back frame 2
   - TempRunFrame0009
   - KateS_EllenE_AriRI_gameclouds 1
   - TempRunFrame0002
@@ -434,8 +453,12 @@ SpriteAtlas:
   - cavesofgallet_tiles_72
   - cavesofgallet_tiles_8
   - cavesofgallet_tiles_9
+  - cloud 3 front frame 2
+  - cloud 3 back frame 1
   - TempRunFrame0001
+  - cloud 2 front frame 1
   - hearts_empty
+  - cloud 3 front frame 1
   - rotating_coin_0
   - rotating_coin_1
   - rotating_coin_2
@@ -555,6 +578,7 @@ SpriteAtlas:
   - TempRunFrame0010
   - cloud_2_back
   - TempRunFrame0016
+  - cloud 1 back frame 1
   m_RenderDataMap: {}
   m_Tag: Tiles
   m_IsVariant: 0
