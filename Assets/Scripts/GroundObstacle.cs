@@ -14,15 +14,27 @@ public class GroundObstacle : MonoBehaviour
 
     private Rigidbody2D myRB;
 
+    private DeathEvent DE;
+
     private void Awake()
     {
         obstacleHitEvent = FindObjectOfType<ObstacleHitEvent>();
         myRB = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
+        DE = FindObjectOfType<DeathEvent>();
     }
     private void Start()
     {
         myRB.velocity = new Vector2(-obstacleSpeed, myRB.velocity.y);
+        DE.OnDeath += DE_OnDeath;
+    }
+
+    private void DE_OnDeath(object sender, EventArgs e)
+    {
+        if(myRB != null)
+        {
+            myRB.velocity = new Vector2(0, 0);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
