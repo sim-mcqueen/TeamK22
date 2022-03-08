@@ -89,6 +89,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: a90142e7ce0f6f24da408581aa62410e, type: 3}
   - {fileID: 21300000, guid: 72d455f766f6fd847878f213b11d86d1, type: 3}
   - {fileID: 21300000, guid: d0a52bf78a4772b44ba638217be34fef, type: 3}
+  - {fileID: 21300000, guid: 515363880101ff849bf33b87a5e32a0d, type: 3}
   - {fileID: 21300000, guid: f97221d8bc9e7fb459f16859f547325c, type: 3}
   - {fileID: 21300000, guid: 35394d091a8728f46adee3ca3b6b3ba1, type: 3}
   - {fileID: 21300000, guid: b29a7219a61eaef41b891500ae4ed3be, type: 3}
@@ -354,6 +355,7 @@ SpriteAtlas:
   - cloud_1_back
   - cloud 2 front frame 2
   - cloud 1 back frame 2
+  - Homescreen
   - cloud 2 back frame 2
   - TempRunFrame0009
   - KateS_EllenE_AriRI_gameclouds 1
