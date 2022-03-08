@@ -1237,7 +1237,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1005392004}
   - component: {fileID: 1005392003}
-  m_Layer: 11
+  m_Layer: 3
   m_Name: PostProcessingManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1746,8 +1746,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraObject: {fileID: 319455195}
-  zoomDistance: 2
-  moveTime: 0.2
+  zoomDistance: 1
+  moveTime: 0.1
 --- !u!1 &1724901545
 GameObject:
   m_ObjectHideFlags: 0
