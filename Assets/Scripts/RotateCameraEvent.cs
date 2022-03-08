@@ -29,7 +29,15 @@ public class RotateCameraEvent : MonoBehaviour
 
     private void RotateCameraEvent_OnRotateCamera(object sender, EventArgs e)
     {
-        StartCoroutine(CameraZoom());
+
+        if(isCameraRotated)
+        {
+            StartCoroutine(CameraZoomIn(0));
+            isCameraRotated = !isCameraRotated;
+            return;
+        }
+        StartCoroutine(CameraZoomIn(180));
+        isCameraRotated = !isCameraRotated;
     }
 
     public void RotateCamera()
@@ -37,7 +45,7 @@ public class RotateCameraEvent : MonoBehaviour
         OnRotateCamera?.Invoke(this, EventArgs.Empty);
     }
 
-    IEnumerator CameraZoom()
+    IEnumerator CameraZoomIn(float rotValue)
     {
         float elapsedTime = 0;
 
@@ -48,9 +56,19 @@ public class RotateCameraEvent : MonoBehaviour
 
             yield return null;
         }
+
         cam.orthographicSize = zoomDistance;
 
-        elapsedTime = 0;
+        cameraObject.transform.localRotation = Quaternion.Euler(0, 0, rotValue);
+        
+        StartCoroutine(CameraZoomOut());
+    }
+
+
+    IEnumerator CameraZoomOut()
+    {
+        float elapsedTime = 0;
+
         while (elapsedTime < (moveTime))
         {
             cam.orthographicSize = Mathf.Lerp(zoomDistance, startZoom, elapsedTime / moveTime);
@@ -58,6 +76,7 @@ public class RotateCameraEvent : MonoBehaviour
 
             yield return null;
         }
+
         cam.orthographicSize = startZoom;
     }
 }
