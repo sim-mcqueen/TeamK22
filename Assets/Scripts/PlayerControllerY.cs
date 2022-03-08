@@ -79,7 +79,11 @@ public class PlayerControllerY : MonoBehaviour
 
     private void Update()
     {
-        myAnim.SetBool("isGrounded", isGrounded);
+        if(GetComponent<Animator>() != null)
+        {
+            myAnim.SetBool("isGrounded", isGrounded);
+        }
+        
 
         Physics2D.gravity = new Vector2(0, gravity);
 

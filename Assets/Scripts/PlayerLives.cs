@@ -37,6 +37,7 @@ public class PlayerLives : MonoBehaviour
         {
             heartOne.SetActive(false);
             deathEvent.Death();
+            Destroy(GetComponent<Animator>());
             return;
         }
         

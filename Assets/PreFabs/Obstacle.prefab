@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacleSpeed: 10
-  obstacleHitNoise: {fileID: 0}
+  obstacleHitNoise: {fileID: 8300000, guid: d767859e85e411c4781c711006ed14a2, type: 3}
 --- !u!50 &8176831656776910510
 Rigidbody2D:
   serializedVersion: 4

@@ -20,7 +20,7 @@ public class GroundObstacle : MonoBehaviour
     {
         obstacleHitEvent = FindObjectOfType<ObstacleHitEvent>();
         myRB = GetComponent<Rigidbody2D>();
-        audioSource = GetComponent<AudioSource>();
+        audioSource = FindObjectOfType<AudioSource>();
         DE = FindObjectOfType<DeathEvent>();
     }
     private void Start()
