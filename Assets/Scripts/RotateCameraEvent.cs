@@ -7,6 +7,9 @@ public class RotateCameraEvent : MonoBehaviour
 {
     public event EventHandler OnRotateCamera;
     public GameObject cameraObject;
+    public float zoomDistance;
+    public float moveTime;
+
     private RotateCameraEvent rotateCameraEvent;
     private bool isCameraRotated = false;
     private float startZoom;
@@ -20,12 +23,13 @@ public class RotateCameraEvent : MonoBehaviour
 
     private void Start()
     {
+        startZoom = cam.orthographicSize;
         rotateCameraEvent.OnRotateCamera += RotateCameraEvent_OnRotateCamera;
     }
 
     private void RotateCameraEvent_OnRotateCamera(object sender, EventArgs e)
     {
-        
+        StartCoroutine(CameraZoom());
     }
 
     public void RotateCamera()
@@ -37,13 +41,23 @@ public class RotateCameraEvent : MonoBehaviour
     {
         float elapsedTime = 0;
 
-        while (elapsedTime < moveTime)
+        while (elapsedTime < (moveTime))
         {
-            transform.position = Vector3.Lerp(transform.position, new Vector2(newPos, 0), (elapsedTime / moveTime));
+            cam.orthographicSize = Mathf.Lerp(startZoom, zoomDistance, elapsedTime / moveTime);
             elapsedTime += Time.deltaTime;
 
             yield return null;
         }
-        transform.position = new Vector2(newPos, 0);
+        cam.orthographicSize = zoomDistance;
+
+        elapsedTime = 0;
+        while (elapsedTime < (moveTime))
+        {
+            cam.orthographicSize = Mathf.Lerp(zoomDistance, startZoom, elapsedTime / moveTime);
+            elapsedTime += Time.deltaTime;
+
+            yield return null;
+        }
+        cam.orthographicSize = startZoom;
     }
 }

@@ -64,7 +64,7 @@ public class KScoreText : MonoBehaviour
             {
                 eventActive = true;
                 // num = Random.Range(0, 0);
-                num = 0;
+                num = 1;
                 if (num == 0)
                 {
                     gravityEvent.ChangeGravity();
