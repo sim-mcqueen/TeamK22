@@ -16,9 +16,10 @@ public class KScoreText : MonoBehaviour
     private bool eventActive = false;
     private GravityEvent gravityEvent;
     private RotateCameraEvent rotateCameraEvent;
-
+    private RandomizeStarEvent randomizeStarEvent;
     private void Awake()
     {
+        randomizeStarEvent = FindObjectOfType<RandomizeStarEvent>();
         rotateCameraEvent = FindObjectOfType<RotateCameraEvent>();
         gravityEvent = FindObjectOfType<GravityEvent>();
         DE = FindObjectOfType<DeathEvent>();
@@ -32,10 +33,6 @@ public class KScoreText : MonoBehaviour
         DE.OnDeath += DE_OnDeath;
     }
 
-    private void RotateCameraEvent_OnRotateCamera(object sender, System.EventArgs e)
-    {
-        throw new System.NotImplementedException();
-    }
 
     private void DE_OnDeath(object sender, System.EventArgs e)
     {
@@ -46,32 +43,22 @@ public class KScoreText : MonoBehaviour
     {
         yield return new WaitForSeconds(deltaScore);
         Score++;
-        if(Score % 150 == 0)
+        if(Score % 50 == 0)
         {
-            if(eventActive)
+            eventActive = true;
+            num = Random.Range(0, 3);
+            num = 2;
+            if (num == 0)
             {
-                if(num == 0)
-                {
-                    gravityEvent.ChangeGravity();
-                }
-                if(num == 1)
-                {
-                    rotateCameraEvent.RotateCamera();
-                }
-                eventActive = false;
+                gravityEvent.ChangeGravity();
             }
-            else
+            if(num == 1)
             {
-                eventActive = true;
-                num = Random.Range(0, 1);
-                if (num == 0)
-                {
-                    gravityEvent.ChangeGravity();
-                }
-                if(num == 1)
-                {
-                    rotateCameraEvent.RotateCamera();
-                }
+                rotateCameraEvent.RotateCamera();
+            }
+            if(num == 2)
+            {
+                randomizeStarEvent.RandomizeStar();
             }
         }
 
