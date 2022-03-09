@@ -46,7 +46,7 @@ public class KScoreText : MonoBehaviour
     {
         yield return new WaitForSeconds(deltaScore);
         Score++;
-        if(Score % 50 == 0)
+        if(Score % 150 == 0)
         {
             if(eventActive)
             {
@@ -63,8 +63,7 @@ public class KScoreText : MonoBehaviour
             else
             {
                 eventActive = true;
-                // num = Random.Range(0, 0);
-                num = 1;
+                num = Random.Range(0, 1);
                 if (num == 0)
                 {
                     gravityEvent.ChangeGravity();

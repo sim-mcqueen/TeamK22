@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8065563561360340886}
   - component: {fileID: -4676497645522151604}
   - component: {fileID: -1137675859338097711}
+  - component: {fileID: 1490361222492736502}
   m_Layer: 0
   m_Name: TestPlatform
   m_TagString: Ground
@@ -202,6 +203,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1490361222492736502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4022793251625037393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899b32af94bc63e478326e82d1dd163b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 3352433635597617816, guid: 4c296bd9e7af1b8449d80fb24bc3e638, type: 3}
+  bounceHeight: 50
 --- !u!1 &8944083613196377958
 GameObject:
   m_ObjectHideFlags: 0
