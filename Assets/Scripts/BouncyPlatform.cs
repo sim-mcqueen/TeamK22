@@ -16,6 +16,7 @@ public class BouncyPlatform : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
+            print("Here");
             rb.velocity += new Vector2(0, bounceHeight);
         }
     }
