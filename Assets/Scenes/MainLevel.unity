@@ -205,6 +205,16 @@ PrefabInstance:
       propertyPath: heartThree
       value: 
       objectReference: {fileID: 2122188453}
+    - target: {fileID: 3352433635597617822, guid: 4c296bd9e7af1b8449d80fb24bc3e638,
+        type: 3}
+      propertyPath: footStepNoiseLow
+      value: 
+      objectReference: {fileID: 8300000, guid: 326eaf6f1d2008044bb512c87a194267, type: 3}
+    - target: {fileID: 3352433635597617822, guid: 4c296bd9e7af1b8449d80fb24bc3e638,
+        type: 3}
+      propertyPath: footStepNoiseHigh
+      value: 
+      objectReference: {fileID: 8300000, guid: cfc265d3a05f7be4b9a46db2c5925607, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c296bd9e7af1b8449d80fb24bc3e638, type: 3}
 --- !u!1 &243031212
@@ -1544,7 +1554,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1989172544}
   - component: {fileID: 1989172543}
-  - component: {fileID: 1989172542}
   m_Layer: 0
   m_Name: LevelMusic
   m_TagString: Untagged
@@ -1552,19 +1561,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1989172542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1989172541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfb186f9ae1e6eb4089ae02a771c5296, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelMusic: {fileID: 8300000, guid: 8dbf1fcf41bd96141934ba2ef122da59, type: 3}
 --- !u!82 &1989172543
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1575,7 +1571,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6eeb1dbadd7f80b448232ca5ecaa8d11, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.429
   m_Pitch: 1
