@@ -24,8 +24,8 @@ public class PlayerControllerY : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip jumpNoise;
     public AudioClip landOnGroundNoise;
-    public AudioClip footStepNoiseHigh;
-    public AudioClip footStepNoiseLow;
+    //public AudioClip footStepNoiseHigh;
+    //public AudioClip footStepNoiseLow;
     public AudioClip flipGravityNoise;
 
     // animation
@@ -93,21 +93,21 @@ public class PlayerControllerY : MonoBehaviour
         {
             jumpsLeft = maxJumps;
 
-            if (stepCooldown < 0f)
-            {
-                if (playHigh)
-                {
-                    audioSource.PlayOneShot(footStepNoiseHigh);
-                    playHigh = !playHigh;
-                    stepCooldown = footStepRate;
-                }
-                else
-                {
-                    audioSource.PlayOneShot(footStepNoiseLow);
-                    playHigh = !playHigh;
-                    stepCooldown = footStepRate;
-                }
-            }
+            //if (stepCooldown < 0f)
+            //{
+                //if (playHigh)
+                //{
+                    //audioSource.PlayOneShot(footStepNoiseHigh);
+                    //playHigh = !playHigh;
+                    //stepCooldown = footStepRate;
+                //}
+                //else
+                //{
+                    //audioSource.PlayOneShot(footStepNoiseLow);
+                    //playHigh = !playHigh;
+                    //stepCooldown = footStepRate;
+                //}
+            //}
         }
 
         if(jumpsLeft == 0) { return; }

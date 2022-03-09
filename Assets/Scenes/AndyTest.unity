@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &172654125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1854,5 +1854,15 @@ PrefabInstance:
       propertyPath: heartThree
       value: 
       objectReference: {fileID: 787740864}
+    - target: {fileID: 3352433635597617822, guid: 4c296bd9e7af1b8449d80fb24bc3e638,
+        type: 3}
+      propertyPath: footStepNoiseLow
+      value: 
+      objectReference: {fileID: 8300000, guid: 326eaf6f1d2008044bb512c87a194267, type: 3}
+    - target: {fileID: 3352433635597617822, guid: 4c296bd9e7af1b8449d80fb24bc3e638,
+        type: 3}
+      propertyPath: footStepNoiseHigh
+      value: 
+      objectReference: {fileID: 8300000, guid: cfc265d3a05f7be4b9a46db2c5925607, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c296bd9e7af1b8449d80fb24bc3e638, type: 3}

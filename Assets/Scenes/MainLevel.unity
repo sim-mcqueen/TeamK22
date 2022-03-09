@@ -732,7 +732,7 @@ PrefabInstance:
     - target: {fileID: 8112281954340383476, guid: 669aee4e5fb77754c8e9d34ff82ab5f3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4671
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8112281954340383476, guid: 669aee4e5fb77754c8e9d34ff82ab5f3,
         type: 3}
@@ -783,6 +783,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Deathfade
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112281954340383479, guid: 669aee4e5fb77754c8e9d34ff82ab5f3,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112281954340383479, guid: 669aee4e5fb77754c8e9d34ff82ab5f3,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112281954340383479, guid: 669aee4e5fb77754c8e9d34ff82ab5f3,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112281954340383479, guid: 669aee4e5fb77754c8e9d34ff82ab5f3,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 669aee4e5fb77754c8e9d34ff82ab5f3, type: 3}
