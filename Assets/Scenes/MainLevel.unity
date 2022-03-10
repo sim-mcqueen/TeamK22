@@ -208,7 +208,7 @@ PrefabInstance:
     - target: {fileID: 3352433635597617819, guid: 4c296bd9e7af1b8449d80fb24bc3e638,
         type: 3}
       propertyPath: waitTime
-      value: 0.75
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3352433635597617819, guid: 4c296bd9e7af1b8449d80fb24bc3e638,
         type: 3}
