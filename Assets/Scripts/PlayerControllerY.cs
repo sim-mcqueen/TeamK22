@@ -12,6 +12,7 @@ public class PlayerControllerY : MonoBehaviour
     public float footStepRate;
     private bool isGrounded = true;
     private bool playHigh = false;
+    private bool jumpPressed = false;
     private float stepCooldown;
     private Color mainColor;
 
@@ -82,6 +83,7 @@ public class PlayerControllerY : MonoBehaviour
         if(GetComponent<Animator>() != null)
         {
             myAnim.SetBool("isGrounded", isGrounded);
+            myAnim.SetBool("isJumping", jumpPressed);
         }
         
 
@@ -92,7 +94,7 @@ public class PlayerControllerY : MonoBehaviour
         if (isGrounded)
         {
             jumpsLeft = maxJumps;
-
+            jumpPressed = false;
             //if (stepCooldown < 0f)
             //{
                 //if (playHigh)
@@ -114,6 +116,7 @@ public class PlayerControllerY : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Space))
         {
+            jumpPressed = true;
             audioSource.PlayOneShot(jumpNoise);
             isGrounded = false;
             jumpsLeft -= 1;
