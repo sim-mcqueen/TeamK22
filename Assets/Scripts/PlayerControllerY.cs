@@ -12,7 +12,8 @@ public class PlayerControllerY : MonoBehaviour
     public float footStepRate;
     private bool isGrounded = true;
     private bool playHigh = false;
-    private bool jumpPressed = false;
+    private bool jumpPressed;
+    private bool isGroundedAndFalling = false;
     private float stepCooldown;
     private Color mainColor;
 
@@ -84,17 +85,26 @@ public class PlayerControllerY : MonoBehaviour
         {
             myAnim.SetBool("isGrounded", isGrounded);
             myAnim.SetBool("isJumping", jumpPressed);
+            myAnim.SetBool("isGroundedAndFalling", isGroundedAndFalling);
         }
         
 
         Physics2D.gravity = new Vector2(0, gravity);
 
         stepCooldown -= Time.deltaTime;
-
+        if (rigidBody.velocity.y <= 0 && isGrounded)
+        {
+            isGroundedAndFalling = true;
+        }
+        else
+        {
+            isGroundedAndFalling = false;
+        }
         if (isGrounded)
         {
             jumpsLeft = maxJumps;
             jumpPressed = false;
+            
             //if (stepCooldown < 0f)
             //{
                 //if (playHigh)
