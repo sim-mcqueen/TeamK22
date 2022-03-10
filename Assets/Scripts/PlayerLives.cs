@@ -30,7 +30,11 @@ public class PlayerLives : MonoBehaviour
     private void Start()
     {
         obstacleHitEvent.OnHitObstacle += ObstacleHitEvent_OnHitObstacle;
+        
     }
+
+    
+
     private void ObstacleHitEvent_OnHitObstacle(object sender, System.EventArgs e)
     {
         lives -= 1;
@@ -54,8 +58,8 @@ public class PlayerLives : MonoBehaviour
         if (lives == 0)
         {
             heartOne.SetActive(false);
+            myAnim.SetBool("isDead", true);
             deathEvent.Death();
-            Destroy(GetComponent<Animator>());
             return;
         }
         
