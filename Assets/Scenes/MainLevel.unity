@@ -208,7 +208,7 @@ PrefabInstance:
     - target: {fileID: 3352433635597617819, guid: 4c296bd9e7af1b8449d80fb24bc3e638,
         type: 3}
       propertyPath: waitTime
-      value: 0.75
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3352433635597617819, guid: 4c296bd9e7af1b8449d80fb24bc3e638,
         type: 3}
@@ -333,7 +333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bdf6e7c34493624ab54890b522cde59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0.35
+  scrollSpeed: 0.5
 --- !u!23 &412302924
 MeshRenderer:
   m_ObjectHideFlags: 0
