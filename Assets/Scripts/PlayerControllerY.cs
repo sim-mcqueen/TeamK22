@@ -139,7 +139,11 @@ public class PlayerControllerY : MonoBehaviour
         if(newBool == true && isGrounded == false)
         {
             playHigh = false;
-            audioSource.PlayOneShot(landOnGroundNoise);
+            if(rigidBody.velocity.y <= 0)
+            {
+                audioSource.PlayOneShot(landOnGroundNoise);
+            }
+            
         }
         isGrounded = newBool;
     }
